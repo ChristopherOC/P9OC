@@ -22,5 +22,6 @@ urlpatterns = [
     path('', Accounts.views.Logins.as_view(), name= 'login'),
     path('register/', Accounts.views.RegisterView.as_view(), name='register'),
     path('feed/', Accounts.views.Feed.as_view(), name='feed'),
-    path('review/',Review.views.CreateReview.as_view(), name='createareview')
+    path('review/',Review.views.CreateReview.as_view(), name='createareview'),
+    path('ticket/', Review.views.CreateTicket.as_view(), name='createticket')
 ]

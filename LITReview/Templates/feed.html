@@ -20,7 +20,10 @@
     <form action="{% url 'createareview' %}" method="GET">
         <button type="submit" name="action" value="create_review">Créer une critique</button>
     </form>
-    
+
+    <form action="{% url 'createticket' %}" method="GET">
+        <button type="submit" name="action" value="create_ticket">Demander une critique</button>
+    </form>
     {% if reviews %}
         {% for review in reviews %}
             <div>
@@ -31,6 +34,16 @@
         {% endfor %}
     {% else %}
         <p>Aucune critique n'a été postée pour le moment.</p>
+    {% endif %}
+
+    {% if ticket %}
+        {% for ticket in ticket %}
+            <div>
+                <h2>{{ticket.titre}}</h2>
+            </div>
+        {% endfor %}
+    {% else %}
+    <p>Aucune demande de critique n'a été faite.</p>
     {% endif %}
 </body>
 </html>

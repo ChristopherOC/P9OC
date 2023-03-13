@@ -65,6 +65,8 @@ class Feed(View):
         return render(request, self.template_name, context)
 
 
-#réponse HTTP/1.1" 200 903 donc réussi mais ne renvoi rien / print rien
+# Dde de critique -> reste a trouver pq elle ne s'affiche pas dans le feed malgré les modifs
+# Erreur sur la méthode de recherche des users avec une method de finding au lieu d'une méthode de sélection *
 
-#Fixe le register, lorsqu'on s'enregistre renvoi bien a la page de connexion (mauvais pathing)
+
+#N'ait pas eu le temps de résoudre la primary key / mais j'ai fait les tests communiqués
